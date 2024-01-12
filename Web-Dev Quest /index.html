@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        margin: 50px;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #3498db;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 250px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .separation {
+        height: 700px;
+      }
+
+      button:hover {
+        background-color: #2184b4;
+      }
+
+      /* Additional styles for the converter-container */
+      .converter-container {
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .input-container {
+        margin: 10px 0;
+      }
+
+      button {
+        margin-top: 10px; /* Adjust the margin based on your design preferences */
+      }
+    </style>
+  </head>
+
+  <body>
+    <hr />
+    <h1>Copy Text Challenge</h1>
+    <label for="textInput">Text to copy:</label>
+    <input type="text" id="textInput" placeholder="Enter text here" />
+    <button onclick="copyText()">Copy Text</button>
+    <hr />
+    <div class="separation"></div>
+    <hr />
+    <h1>Excel Export Challenge</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-primary">
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@abc</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@xyz</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@lmn</td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="exportToExcel()">Export to Excel</button>
+    <hr />
+    <div class="separation"></div>
+    <hr />
+    <div class="converter-container">
+      <h1>Currency Converter Challenge</h1>
+      <div class="input-container">
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          placeholder="Enter amount"
+          step="0.01"
+        />
+      </div>
+      <div class="input-container">
+        <label for="fromCurrency">From Currency:</label>
+        <select id="fromCurrency"></select>
+      </div>
+      <div class="input-container">
+        <label for="toCurrency">To Currency:</label>
+        <select id="toCurrency"></select>
+      </div>
+      <button onclick="convert()">Convert</button>
+      <div id="result"></div>
+      <div id="history"></div>
+    </div>
+    <hr />
+    <div class="separation"></div>
+    <script src="./challenge1.js"></script>
+    <script src="./challenge2.js"></script>
+    <script src="./challenge3.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
